@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="reley_block">
+
+
+<div class="container_rele">
+    <nav class="user_nav">
+
+    </nav>
+    <div class="content">
+        <h2><span>Relay</span></h2>
+        <div class="box_info">
+            <p class="info_text_1">
+                Click to switch
+            </p>
+            <p class="info_text_2">
+                Time (sec)*
+             </p>
+        </div>
+        <div class="rele1">
+            <p>Reley 1</p>
+            <button id="button_1" onclick="myButton_1(countdown_1())" class="btn_rele" role="button">Start</button>
+            <input type="number"  id="number_1" />
+        </div>
+        <div class="rele2">
+            <p>Reley 2</p>
+            <button id="button_2" onclick="myButton_2(countdown_2())" class="btn_rele" role="button">Start</button>
+            <input type="number" id="number_2"/>
+        </div>
+    </div>
+    <div class="info_rele">
+       <span>
+        Enter number and press button - Start
+        </span>
+    </div>
+</div>
+ <script>
+
+            function myButton_1() {
+                var change = document.getElementById("button_1");
+                if (change.innerHTML == "Start" || change.style.background == 'green' )
+                {
+                    change.innerHTML = "Stop" ;
+                    change.style.background = 'red';
+                }
+                else {
+                    change.innerHTML = "Start" ;
+                    change.style.background = 'green';
+                }
+            }
+
+     function myButton_2() {
+                var change = document.getElementById("button_2");
+                if (change.innerHTML == "Start" || change.style.background == 'green' )
+                {
+                    change.innerHTML = "Stop" ;
+                    change.style.background = 'red';
+                }
+                else {
+                    change.innerHTML = "Start" ;
+                    change.style.background = 'green';
+                }
+            }
+
+        </script>
+
+
+
+<script>
+
+
+
+
+function countdown_1() {
+    var t = document.getElementById('number_1').value;
+    setTimeout(function(){
+
+        var change = document.getElementById("button_1");
+                if (change.innerHTML == "Stop" || change.style.background == 'red' )
+                {
+                    change.innerHTML = "Start" ;
+                    change.style.background = 'green';
+                }
+                else {
+                    change.innerHTML = "Stop" ;
+                    change.style.background = 'red';
+                }
+
+    }, t*1000);
+}
+
+    function countdown_2() {
+    var t = document.getElementById('number_2').value;
+    setTimeout(function(){
+
+        var change = document.getElementById("button_2");
+                if (change.innerHTML == "Stop" || change.style.background == 'red' )
+                {
+                    change.innerHTML = "Start" ;
+                    change.style.background = 'green';
+                }
+                else {
+                    change.innerHTML = "Stop" ;
+                    change.style.background = 'red';
+                }
+
+    }, t*1000);
+}
+</script>
+  </div>
+
+</body>
+</html>
